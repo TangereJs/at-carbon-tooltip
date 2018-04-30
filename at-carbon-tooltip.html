@@ -8,14 +8,13 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-
 <link rel="import" href="../tangere/tangere.html" />
 <link rel="import" href="../neon-animation/neon-animation-runner-behavior.html">
 <link rel="import" href="../neon-animation/animations/fade-in-animation.html">
 <link rel="import" href="../neon-animation/animations/fade-out-animation.html">
 
 <!--
-Material design: [Tooltips](https://www.google.com/design/spec/components/tooltips.html)
+### Material design: [Tooltips](https://www.google.com/design/spec/components/tooltips.html) <br/>
 
 `<at-carbon-tooltip>` is a label that appears on hover and focus when the user
 hovers over an element with the cursor or with the keyboard. It will be centered
@@ -25,6 +24,7 @@ you must explicitely include the `web-animations` polyfill if you want this
 element to work on browsers not implementing the WebAnimations spec.
 
 Example:
+```
     // polyfill 
     <link rel="import" href="../../neon-animation/web-animations.html">
 
@@ -37,25 +37,29 @@ Example:
       <button id="btn">Click me!</button>
       <at-carbon-tooltip for="btn">Tooltip text</at-carbon-tooltip>
     </div>
+```
 
 The tooltip can be positioned on the top|bottom|left|right of the anchor using
 the `position` attribute. The default position is bottom.
+<br/>
 
-    <at-carbon-tooltip for="btn" position="left">Tooltip text</at-carbon-tooltip>
-    <at-carbon-tooltip for="btn" position="top">Tooltip text</at-carbon-tooltip>
+Example: 
+```
+  <at-carbon-tooltip for="btn" position="left">Tooltip text</at-carbon-tooltip>
+  <at-carbon-tooltip for="btn" position="top">Tooltip text</at-carbon-tooltip>
+```
 
 ### Styling
 
-The following custom properties and mixins are available for styling:
+The following custom properties and mixins are available for styling:<br/>
 
-Custom property | Description | Default
-----------------|-------------|----------
-`--at-carbon-tooltip-background` | The background color of the tooltip | `#616161`
-`--at-carbon-tooltip-opacity` | The opacity of the tooltip | `0.9`
-`--at-carbon-tooltip-text-color` | The text color of the tooltip | `white`
-`--at-carbon-tooltip` | Mixin applied to the tooltip | `{}`
+| Custom property | Description | Default |
+| -------------- | ------------- | ---------- |
+| `--at-carbon-tooltip-background` | The background color of the tooltip | `#616161` |
+| `--at-carbon-tooltip-opacity` | The opacity of the tooltip | `0.9` |
+| `--at-carbon-tooltip-text-color` | The text color of the tooltip | `white` |
+| `--at-carbon-tooltip` | Mixin applied to the tooltip | `{}` |
 
-@group Paper Elements
 @element at-carbon-tooltip
 @demo demo/index.html
 -->
