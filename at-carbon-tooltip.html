@@ -146,7 +146,14 @@ The following custom properties and mixins are available for styling:<br/>
          */
         position: {
           type: String,
-          value: 'bottom'
+          value: 'bottom',
+          xtype: "enum",
+          xvaluelist: [
+            { title: "Top", value: "top" },
+            { title: "Right", value: "right" },
+            { title: "Bottom", value: "bottom" },
+            { title: "Left", value: "left" }
+          ]
         },
 
         /**
