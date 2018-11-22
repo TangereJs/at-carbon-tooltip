@@ -342,7 +342,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         expect(contentRect.top).to.be.equal(20 + 14);
       });
 
-      test('tooltip is hidden after target is blurred', function(done) {
+      test('tooltip is hidden after target is blurred', function() {
         var f = fixture('basic');
         var target = f.querySelector('#target');
         var tooltip = f.querySelector('at-carbon-tooltip');
@@ -354,11 +354,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         tooltip._showing = true;
         assert.isFalse(isHidden(actualTooltip));
 
-        tooltip.addEventListener('neon-animation-finish', function() {
-          assert.isTrue(isHidden(actualTooltip));
-          done();
-        });
         MockInteractions.blur(target);
+        assert.isTrue(isHidden(actualTooltip));
       });
 
       test('tooltip unlistens to target on detach', function(done) {
