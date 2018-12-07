@@ -21,12 +21,6 @@
         @apply --paper-font-common-base;
         font-size: 10px;
         line-height: 1;
-        /* 
-          nowrap ensures that tooltip text is single line 
-          single line text ensures that tooltip boundingClientRect will compute the width of single line text
-          this way tooltip is positioned correctly relative to the element tooltip should be displayed for
-        */
-        white-space: nowrap;
 
         background-color: var(--at-carbon-tooltip-background, #616161);
         opacity: var(--at-carbon-tooltip-opacity, 0.9);
