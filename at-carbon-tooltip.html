@@ -175,7 +175,19 @@
         this._showing = true;
         
         this.toggleClass('hidden', false, this.$.tooltip);
+        
+        //
+        // updatePosition function fails to correctly position the tooltip the first time it has to position the tooltip
+        // the failure occurs because this.$.tooltip has improper dimensions the first time around, specifically width
+        // to force the computation of correct value for width we set whiteSpace property to nowrap
+        // after this.$.tooltip is positioned correcty we reset whiteSpace property
+        //
+        var prevWhitespaceValue = this.$.tooltip.style.whiteSpace;
+        this.$.tooltip.style.whiteSpace = "nowrap";
+
         this.updatePosition();
+
+        this.$.tooltip.style.whiteSpace = prevWhitespaceValue;
       },
 
       hide: function() {
